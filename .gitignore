@@ -1,0 +1,13 @@
+# Backup files
+backup/
+
+# MacOS
+.DS_Store
+
+# Arquivos grandes não otimizados (manter apenas os otimizados)
+HERO/Fundo do Mar em 4K (Incrível) - Seabed in 4K (Amazing).mp4
+HERO/VIDEO OCEANO.mp4
+HERO/fundo-mar-otimizado.mp4
+
+# Arquivos PNG originais (já temos WebP otimizado)
+# Manter apenas como fallback, mas não priorizar no commit

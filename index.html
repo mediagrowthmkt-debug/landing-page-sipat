@@ -11,8 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Otimização de Performance -->
-    <link rel="preload" as="image" href="HERO/meninaoculos.png">
+    <!-- Otimização de Performance - Preload de recursos críticos -->
+    <link rel="preload" as="video" href="HERO/hero-video-optimized.mp4">
+    <link rel="preload" as="image" href="HERO/meninaoculos.webp">
 </head>
 <body>
     <!-- Header Fixo com Logo -->
@@ -32,9 +33,9 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <!-- Vídeo de Fundo Otimizado -->
-        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="HERO/meninaoculos.png">
-            <source src="HERO/fundo-mar-otimizado.mp4" type="video/mp4">
+        <!-- Vídeo de Fundo Super Otimizado para Fluidez -->
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="HERO/meninaoculos.webp">
+            <source src="HERO/hero-video-optimized.mp4" type="video/mp4">
             Seu navegador não suporta vídeos HTML5.
         </video>
         
@@ -47,7 +48,10 @@
                 <div class="hero-content">
                     <!-- Logo acima do texto -->
                     <div class="hero-logo">
-                        <img src="HERO/PROPOSTA DE PARCERIA.png" alt="Instituto Gaia Soul - Proposta de Parceria" class="logo-hero">
+                        <picture>
+                            <source srcset="HERO/PROPOSTA DE PARCERIA.webp" type="image/webp">
+                            <img src="HERO/PROPOSTA DE PARCERIA.png" alt="Instituto Gaia Soul - Proposta de Parceria" class="logo-hero">
+                        </picture>
                     </div>
                     
                     <h1 class="hero-title">
@@ -64,7 +68,10 @@
                 
                 <!-- Imagem da Menina com Óculos 3D -->
                 <div class="hero-image">
-                    <img src="HERO/meninaoculos.png" alt="Pessoa usando óculos VR 3D - Experiência Imersiva SIPAT" class="vr-girl">
+                    <picture>
+                        <source srcset="HERO/meninaoculos.webp" type="image/webp">
+                        <img src="HERO/meninaoculos.png" alt="Pessoa usando óculos VR 3D - Experiência Imersiva SIPAT" class="vr-girl">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -92,7 +99,7 @@
             <div class="about-content">
                 <h2 class="section-title">
                     Como Melhorar a <span class="highlight">Qualidade de Vida</span> 
-                    com a Paixão da natureza e <span class="highlight">trabalho em equipe</span>
+                    com a paixão pela natureza e <span class="highlight">trabalho em equipe</span>
                 </h2>
                 <p class="about-text">
                     Oferecido pelo <strong>Instituto Gaia Soul</strong>.<br>
@@ -385,17 +392,26 @@
                 <div class="marcelo-image">
                     <!-- Imagem flutuante superior -->
                     <div class="floating-image floating-top">
-                        <img src="fotos/igs.png" alt="Instituto Gaia Soul">
+                        <picture>
+                            <source srcset="fotos/igs.webp" type="image/webp">
+                            <img src="fotos/igs.png" alt="Instituto Gaia Soul">
+                        </picture>
                     </div>
                     
                     <!-- Foto principal do Marcelo -->
                     <div class="image-placeholder">
-                        <img src="fotos/foto marcelo.png" alt="Marcelo Telles - Oceanógrafo e Especialista em Oceanoterapia">
+                        <picture>
+                            <source srcset="fotos/foto marcelo.webp" type="image/webp">
+                            <img src="fotos/foto marcelo.png" alt="Marcelo Telles - Oceanógrafo e Especialista em Oceanoterapia">
+                        </picture>
                     </div>
                     
                     <!-- Imagem flutuante inferior -->
                     <div class="floating-image floating-bottom">
-                        <img src="fotos/marceloig.png" alt="Marcelo - Instituto Gaia Soul">
+                        <picture>
+                            <source srcset="fotos/marceloig.webp" type="image/webp">
+                            <img src="fotos/marceloig.png" alt="Marcelo - Instituto Gaia Soul">
+                        </picture>
                     </div>
                 </div>
                 

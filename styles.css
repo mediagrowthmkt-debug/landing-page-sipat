@@ -234,7 +234,7 @@ body {
     transform: translateX(0px) translateY(0px);
 }
 
-/* Vídeo de Fundo */
+/* Vídeo de Fundo - Otimizado para Máxima Fluidez */
 .hero-video {
     position: absolute;
     top: 50%;
@@ -246,6 +246,12 @@ body {
     transform: translate(-50%, -50%);
     z-index: 0;
     object-fit: cover;
+    /* Otimizações para fluidez */
+    will-change: transform;
+    transform: translate(-50%, -50%) translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
 }
 
 /* Overlay leve para melhor legibilidade */

@@ -1,3 +1,30 @@
+// Otimização do vídeo hero para garantir fluidez perfeita
+document.addEventListener('DOMContentLoaded', function() {
+    const heroVideo = document.querySelector('.hero-video');
+    
+    if (heroVideo) {
+        // Garantir que o vídeo seja reproduzido de forma fluida
+        heroVideo.addEventListener('loadeddata', function() {
+            this.play().catch(function(error) {
+                console.log('Autoplay impedido, tentando novamente:', error);
+            });
+        });
+        
+        // Garantir loop perfeito sem interrupções
+        heroVideo.addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+        });
+        
+        // Garantir que o vídeo continue tocando mesmo após mudança de aba
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden && heroVideo.paused) {
+                heroVideo.play();
+            }
+        });
+    }
+});
+
 // Scroll suave para âncoras
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
